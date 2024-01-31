@@ -2,7 +2,7 @@
 
 1. Temos que criar um projeto tipo "node", para isso deve ser instalado o "package.json";
 
-   - em qualquer terminal instalar o npm com o comando npm init -y (-y pq é na raíz);
+   - em qualquer terminal instalar o npm com o comando "npm init -y" (-y pq é na raíz);
 
 2. Temos que instalar o typescript no projeto com o comando
 
@@ -33,4 +33,4 @@
 
    - adicionar "start": "npx tsc && node build/index.js",
 
-   - para chamar o script digite "npm run start"
+   - para rodar o script digite "npm run start"
