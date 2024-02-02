@@ -115,6 +115,7 @@ function getDatabase(id) {
         return "Felipe";
     });
 }
+<<<<<<< HEAD
 /**
  * * Generics
  * exemplo abaixo:
@@ -129,3 +130,87 @@ const stgArray = concatArray(["silvas", "goku"], ["pikachu"]);
 //numArray.push("santana"); com tipo "any" passa, mas com "T" dá erro.
 console.log(numArray);
 console.log(stgArray);
+=======
+const bot = {
+    id: 1,
+    name: "megaman",
+};
+const bot2 = {
+    id: 1,
+    name: "megaman2",
+};
+const bot3 = {
+    id: "1",
+    name: "megaman3",
+};
+const bot4 = {
+    id: "1",
+    name: "megaman4",
+    sayHello: function () {
+        throw new Error("Function not implemented.");
+    }
+};
+console.log(bot);
+console.log(bot2);
+console.log(bot3.name = "silvas");
+console.log(bot3);
+console.log(bot4);
+/**
+ * * Classes (type: para tipar x interface: para trabalhar com classes)
+* exemplo abaixo:
+*/
+class Pessoa {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    sayHello() {
+        return `Hello! I'm ${this.name}.`;
+    }
+}
+const p = new Pessoa(1, "gutsman");
+console.log(p.sayHello());
+//Outros exemplos de classes:
+class Character {
+    constructor(name, stregth, skill) {
+        this.name = name;
+        this.stregth = stregth;
+        this.skill = skill;
+    }
+    attacke() {
+        console.log(`Attack with ${this.stregth} points`);
+    }
+}
+//const p1 = new Character(10, 98);
+const p1 = new Character("silvas", 10, 98);
+console.log(p1);
+p1.attacke(); //não precisa de console.log pq já está executando o método
+/**
+ * * Data modifiers (public, private, protected), quando não é informada por padrão é public. Pode ser utilizado em propriedades e em métodos.
+ *  o modificador "readonly"
+*exemplo abaixo:
+*/
+class Character2 {
+    constructor(stregth, skill) {
+        this.stregth = stregth;
+        this.skill = skill;
+    }
+    attacke() {
+        console.log(`Attack with ${this.stregth} points`);
+    }
+}
+/**
+ * * Subclasses
+*exemplo abaixo:
+*/
+//Character: superclass (classe pai)
+//Magician: subclass (classe filha)
+class Magician extends Character {
+    constructor(name, stregth, skill, magicPoints) {
+        super(name, stregth, skill);
+        this.magicPoints = magicPoints;
+    }
+}
+const p2 = new Magician("Mago", 9, 30, 100);
+console.log(p2);
+>>>>>>> 8f5d497e80c72deaa47319824c20ab7065c3578e
