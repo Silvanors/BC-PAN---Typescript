@@ -34,3 +34,8 @@
    - adicionar "start": "npx tsc && node build/index.js",
 
    - para rodar o script digite "npm run start"
+
+9. Outra maneira de rodar o typeScript sem gerar "builds" toda hora, instalar o servidor local que entendo o ts:
+   - "npm install ts-node-dev -D"
+   - Em seguida configurar novamente o arquivo package.json adicionando o script "start:dev": "ts-node-dev --respawn --transpile-only src/index.js"
+   - Após a configuração para rodar o ts basta digitar no terminal "npm run start:dev"

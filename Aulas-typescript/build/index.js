@@ -1,4 +1,13 @@
 "use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 function printaObjetos(pessoa) {
     console.log(pessoa);
 }
@@ -97,3 +106,26 @@ function CallToPhone(phone) {
 }
 console.log(CallToPhone("3133111"));
 console.log(CallToPhone(3133111));
+/**
+ * * Funções assincronas (Nas funções assincronas deve-se declarar o tipo esperado com o uso da Promise<>)
+* exemplo abaixo:
+*/
+function getDatabase(id) {
+    return __awaiter(this, void 0, void 0, function* () {
+        return "Felipe";
+    });
+}
+/**
+ * * Generics
+ * exemplo abaixo:
+*/
+function concatArray(...itens) {
+    return new Array().concat(...itens);
+}
+//com generics a gende pode delimitar o tipo que deseja no retorno. 
+//No nosso exemplo foi um tipo "number" e outro tipo "string"
+const numArray = concatArray([1, 5], [3]);
+const stgArray = concatArray(["silvas", "goku"], ["pikachu"]);
+//numArray.push("santana"); com tipo "any" passa, mas com "T" dá erro.
+console.log(numArray);
+console.log(stgArray);

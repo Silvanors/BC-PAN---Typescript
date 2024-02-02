@@ -141,3 +141,33 @@ console.log(CallToPhone(3133111));
 async function getDatabase(id: number): Promise<string>{
     return "Felipe";
 }
+
+/**
+ * * Generics
+ * exemplo abaixo:
+*/
+function concatArray<T>(...itens: T[]): T[]{
+    return new Array().concat(...itens);
+}
+
+//com generics a gende pode delimitar o tipo que deseja no retorno. 
+//No nosso exemplo foi um tipo "number" e outro tipo "string"
+const numArray = concatArray<number[]>([1,5], [3]);
+const stgArray = concatArray<string[]>(["silvas", "goku"], ["pikachu"])
+
+//numArray.push("santana"); com tipo "any" passa, mas com "T" dá erro.
+
+console.log(numArray);
+console.log(stgArray);
+
+/**
+ * * Decorators
+ * exemplo abaixo:
+*/
+function ExibirNome(target: any){
+    console.log(target);
+}
+
+class Funcionario {
+    
+}
